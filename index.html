@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dress Pink - Moda Feminina</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <!-- Logo com imagem e texto -->
+    <a href="#" class="logo-link">
+      <img src="img/logo.png" alt="Logo Dress Pink" class="logo-img" />
+      <span class="logo-text">Dress Pink</span>
+    </a>
+
+    <!-- Navegação -->
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#colecao">Coleção</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botão para abrir menu em dispositivos móveis -->
+    <button id="btn-menu" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <!-- Banner principal -->
+  <section class="banner" id="colecao">
+    <h2>Bem-vinda à Dress Pink</h2>
+    <p>Moda feminina para mulheres que amam estilo e conforto.</p>
+    <button class="btn-banner">Confira nossa coleção</button>
+  </section>
+
+  <!-- Filtro de categorias -->
+  <section class="filtro">
+    <h3>Filtrar por categoria</h3>
+    <select id="filtro-categoria" aria-label="Filtrar produtos por categoria">
+      <option value="todos">Todos</option>
+      <option value="vestidos">Vestidos</option>
+      <option value="blusas">Blusas</option>
+      <option value="calcas">Calças</option>
+      <option value="acessorios">Acessórios</option>
+    </select>
+  </section>
+
+  <!-- Produtos -->
+  <section class="produtos" id="produtos">
+    <h3>Nossos Produtos</h3>
+
+    <div class="produtos-lista">
+      <!-- Produto 1 -->
+      <div class="produto" data-categoria="vestidos">
+        <img src="img/vestido1.jpg" alt="Vestido Floral" />
+        <h4>Vestido Floral</h4>
+        <p class="descricao">Vestido leve com estampa floral para ocasiões especiais.</p>
+        <p class="preco">R$ 129,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto" data-categoria="vestidos">
+        <img src="img/vestido2.jpg" alt="Vestido Rosa" />
+        <h4>Vestido Rosa</h4>
+        <p class="descricao">Vestido rosa clássico com caimento perfeito.</p>
+        <p class="preco">R$ 149,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="produto" data-categoria="blusas">
+        <img src="img/blusa1.jpg" alt="Blusa Manga Longa" />
+        <h4>Blusa Manga Longa</h4>
+        <p class="descricao">Blusa confortável para o dia a dia.</p>
+        <p class="preco">R$ 89,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 4 -->
+      <div class="produto" data-categoria="blusas">
+        <img src="img/blusa2.jpg" alt="Blusa Rosa" />
+        <h4>Blusa Rosa</h4>
+        <p class="descricao">Blusa rosa em tecido leve e macio.</p>
+        <p class="preco">R$ 79,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 5 -->
+      <div class="produto" data-categoria="calcas">
+        <img src="img/calca1.jpg" alt="Calça Jeans" />
+        <h4>Calça Jeans</h4>
+        <p class="descricao">Calça jeans com corte moderno e confortável.</p>
+        <p class="preco">R$ 159,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 6 -->
+      <div class="produto" data-categoria="calcas">
+        <img src="img/calca2.jpg" alt="Calça Rosa" />
+        <h4>Calça Rosa</h4>
+        <p class="descricao">Calça rosa para compor looks alegres.</p>
+        <p class="preco">R$ 169,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 7 -->
+      <div class="produto" data-categoria="acessorios">
+        <img src="img/acessorio1.jpg" alt="Brinco Pink" />
+        <h4>Brinco Pink</h4>
+        <p class="descricao">Brinco delicado para complementar seu visual.</p>
+        <p class="preco">R$ 49,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 8 -->
+      <div class="produto" data-categoria="acessorios">
+        <img src="img/acessorio2.jpg" alt="Colar Rosa" />
+        <h4>Colar Rosa</h4>
+        <p class="descricao">Colar elegante e moderno.</p>
+        <p class="preco">R$ 59,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 9 -->
+      <div class="produto" data-categoria="vestidos">
+        <img src="img/vestido3.jpg" alt="Vestido Curto" />
+        <h4>Vestido Curto</h4>
+        <p class="descricao">Vestido curto para eventos casuais.</p>
+        <p class="preco">R$ 119,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 10 -->
+      <div class="produto" data-categoria="blusas">
+        <img src="img/blusa3.jpg" alt="Blusa Decote" />
+        <h4>Blusa Decote</h4>
+        <p class="descricao">Blusa com decote elegante para noite.</p>
+        <p class="preco">R$ 99,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 11 -->
+      <div class="produto" data-categoria="calcas">
+        <img src="img/calca3.jpg" alt="Calça Social" />
+        <h4>Calça Social</h4>
+        <p class="descricao">Calça social para um look formal.</p>
+        <p class="preco">R$ 189,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 12 -->
+      <div class="produto" data-categoria="acessorios">
+        <img src="img/acessorio3.jpg" alt="Pulseira Pink" />
+        <h4>Pulseira Pink</h4>
+        <p class="descricao">Pulseira delicada para complementar seu look.</p>
+        <p class="preco">R$ 39,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 13 -->
+      <div class="produto" data-categoria="vestidos">
+        <img src="img/vestido4.jpg" alt="Vestido Longo" />
+        <h4>Vestido Longo</h4>
+        <p class="descricao">Vestido longo para ocasiões especiais.</p>
+        <p class="preco">R$ 199,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 14 -->
+      <div class="produto" data-categoria="blusas">
+        <img src="img/blusa4.jpg" alt="Blusa Estampada" />
+        <h4>Blusa Estampada</h4>
+        <p class="descricao">Blusa com estampa alegre e moderna.</p>
+        <p class="preco">R$ 89,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 15 -->
+      <div class="produto" data-categoria="calcas">
+        <img src="img/calca4.jpg" alt="Calça Rosa Escura" />
+        <h4>Calça Rosa Escura</h4>
+        <p class="descricao">Calça para compor looks sofisticados.</p>
+        <p class="preco">R$ 179,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 16 -->
+      <div class="produto" data-categoria="acessorios">
+        <img src="img/acessorio4.jpg" alt="Chapéu Pink" />
+        <h4>Chapéu Pink</h4>
+        <p class="descricao">Chapéu estiloso para dias ensolarados.</p>
+        <p class="preco">R$ 69,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 17 -->
+      <div class="produto" data-categoria="vestidos">
+        <img src="img/vestido5.jpg" alt="Vestido de Festa" />
+        <h4>Vestido de Festa</h4>
+        <p class="descricao">Vestido sofisticado para eventos formais.</p>
+        <p class="preco">R$ 249,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 18 -->
+      <div class="produto" data-categoria="blusas">
+        <img src="img/blusa5.jpg" alt="Blusa Casual" />
+        <h4>Blusa Casual</h4>
+        <p class="descricao">Blusa básica para o dia a dia.</p>
+        <p class="preco">R$ 79,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 19 -->
+      <div class="produto" data-categoria="calcas">
+        <img src="img/calca5.jpg" alt="Calça Skinny" />
+        <h4>Calça Skinny</h4>
+        <p class="descricao">Calça justa e moderna.</p>
+        <p class="preco">R$ 169,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- Produto 20 -->
+      <div class="produto" data-categoria="acessorios">
+        <img src="img/acessorio5.jpg" alt="Óculos Rosa" />
+        <h4>Óculos Rosa</h4>
+        <p class="descricao">Óculos de sol moderno e estiloso.</p>
+        <p class="preco">R$ 89,90</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre a loja -->
+  <section class="sobre" id="sobre">
+    <h3>Sobre a Dress Pink</h3>
+    <p>
+      A Dress Pink é uma loja de moda feminina que oferece peças estilosas e confortáveis para mulheres que querem se
+      sentir confiantes e elegantes em qualquer ocasião. Priorizamos qualidade, tendências e atendimento personalizado.
+    </p>
+  </section>
+
+  <!-- Contato -->
+  <section class="contato" id="contato">
+    <h3>Contato</h3>
+    <form id="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Dress Pink. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
