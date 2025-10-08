@@ -82,36 +82,31 @@ function toggleTema() {
     body.style.backgroundColor = '#222';
     body.style.color = '#eee';
   } else {
-    body.style.backgroundColor = '#fff0f6';
+    body.style.backgroundColor = '#EDDCD4';
     body.style.color = '#333';
   }
 }
 
-// Criando botão para alterar tema dinamicamente
-const botaoTema = document.createElement('button');
-botaoTema.textContent = 'Alternar Tema';
-botaoTema.style.position = 'fixed';
-botaoTema.style.bottom = '20px';
-botaoTema.style.right = '20px';
-botaoTema.style.padding = '10px 16px';
-botaoTema.style.backgroundColor = '#d6336c';
-botaoTema.style.color = 'white';
-botaoTema.style.border = 'none';
-botaoTema.style.borderRadius = '20px';
-botaoTema.style.cursor = 'pointer';
-botaoTema.style.zIndex = '1000';
+// Lightbox
+const imagens = document.querySelectorAll('.produto img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const fechar = document.querySelector('.lightbox .fechar');
 
-botaoTema.addEventListener('click', toggleTema);
+imagens.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+  });
+});
 
-document.body.appendChild(botaoTema);
+fechar.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
 
-// Função para exibir data/hora atual no rodapé
-function mostrarDataHora() {
-  const footer = document.querySelector('.footer');
-  const now = new Date();
-  footer.textContent = `© 2025 Dress Pink. Todos os direitos reservados. ${now.toLocaleString()}`;
-}
-
-// Atualiza data/hora a cada 10 segundos
-setInterval(mostrarDataHora, 10000);
-mostrarDataHora();
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
