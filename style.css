@@ -187,11 +187,11 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 16px;
-    border: 1px solid #d6336c;
+    border: 1px solid #8F676B;
   }
   
   .produto h4 {
-    color: #d6336c;
+    color: #8F676B;
     margin-bottom: 8px;
     font-weight: 700;
   }
@@ -206,13 +206,13 @@
   
   .preco {
     font-size: 1.2rem;
-    color: #b02a58;
+    color: #463437;
     font-weight: 700;
     margin-bottom: 12px;
   }
   
   .btn-comprar {
-    background-color: #d6336c;
+    background-color: #D89A9E;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -224,7 +224,7 @@
   
   .btn-comprar:hover,
   .btn-comprar:focus {
-    background-color: #b02a58;
+    background-color: #8F676B;
     outline: none;
   }
   
@@ -237,7 +237,7 @@
   }
   
   .sobre h3 {
-    color: #d6336c;
+    color: #463437;
     font-size: 2rem;
     margin-bottom: 16px;
   }
@@ -246,6 +246,7 @@
     font-size: 1.1rem;
     color: #444;
     line-height: 1.8;
+    text-align: justify;
   }
   
   /* Contato */
@@ -256,7 +257,7 @@
   }
   
   .contato h3 {
-    color: #d6336c;
+    color: #8F676B;
     font-size: 2rem;
     margin-bottom: 24px;
     text-align: center;
@@ -270,20 +271,20 @@
   
   #form-contato label {
     font-weight: 600;
-    color: #b02a58;
+    color: #8F676B;
   }
   
   #form-contato input,
   #form-contato textarea {
     padding: 10px 12px;
-    border: 2px solid #d6336c;
+    border: 2px solid #8F676B;
     border-radius: 8px;
     font-size: 1rem;
     resize: vertical;
   }
   
   #form-contato button {
-    background-color: #d6336c;
+    background-color: #D89A9E;
     color: white;
     font-weight: 700;
     padding: 12px 0;
@@ -296,13 +297,13 @@
   
   #form-contato button:hover,
   #form-contato button:focus {
-    background-color: #b02a58;
+    background-color: #8F676B;
     outline: none;
   }
   
   /* Footer */
   .footer {
-    background-color: #D89A9E;
+    background-color: #E3BBB9;
     color: rgb(109, 109, 109);
     text-align: center;
     padding: 20px 16px;
