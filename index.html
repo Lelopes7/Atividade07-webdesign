@@ -54,6 +54,12 @@
   <section class="produtos" id="produtos">
     <h3>Nossos Produtos</h3>
 
+    <!-- Pesquisa de produtos -->
+<div class="pesquisa-produtos">
+  <input type="text" id="input-pesquisa" placeholder="Pesquisar produto..." aria-label="Pesquisar produto" />
+  <button id="btn-pesquisar">Pesquisar</button>
+</div>
+
     <div class="produtos-lista">
       <!-- Produto 1 -->
       <div class="produto" data-categoria="vestidos">
@@ -236,6 +242,12 @@
       </div>
 
     </div>
+
+    
+        <!-- Mensagem caso não encontre produtos -->
+        <p id="mensagem-nao-encontrado" style="display:none; text-align:center; color:#8F676B; font-weight:700; margin-top:16px;">
+          Produto não encontrado
+        </p>
   </section>
 
 

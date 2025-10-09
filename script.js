@@ -112,4 +112,39 @@ lightbox.addEventListener('click', (e) => {
 });
 
 
+// Pesquisa de produtos
+const inputPesquisa = document.getElementById('input-pesquisa');
+const btnPesquisar = document.getElementById('btn-pesquisar');
+const mensagemNaoEncontrado = document.getElementById('mensagem-nao-encontrado');
+
+function pesquisarProdutos() {
+  const termo = inputPesquisa.value.trim().toLowerCase();
+  let algumEncontrado = false;
+
+  produtos.forEach(produto => {
+    const nomeProduto = produto.querySelector('h4').textContent.toLowerCase();
+    const categoriaProduto = produto.getAttribute('data-categoria');
+
+    // Filtra pelo termo e categoria selecionada
+    if (nomeProduto.includes(termo) && (filtro.value === 'todos' || filtro.value === categoriaProduto)) {
+      produto.style.display = 'flex';
+      algumEncontrado = true;
+    } else {
+      produto.style.display = 'none';
+    }
+  });
+
+  mensagemNaoEncontrado.style.display = algumEncontrado ? 'none' : 'block';
+}
+
+// Pesquisar ao clicar no botão
+btnPesquisar.addEventListener('click', pesquisarProdutos);
+
+// Pesquisar ao pressionar Enter no input
+inputPesquisa.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    pesquisarProdutos();
+  }
+});
+
 
