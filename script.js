@@ -148,3 +148,10 @@ inputPesquisa.addEventListener('keyup', (e) => {
 });
 
 
+const btncarrinho = document.querySelectorAll('.btn-carrinho');
+botao.addEventListener('click', () => {
+const produtoDiv = botao.closest('.produto');
+const nomeProduto = produtoDiv.querySelector('h4').textContent;
+alert(`"${nomeProduto}" foi adicionado ao seu carrinho!`);
+});
+

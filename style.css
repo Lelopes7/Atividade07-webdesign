@@ -240,6 +240,29 @@ body {
     outline: none;
 }
 
+.botoes-produto {
+    display: flex; 
+    gap: 8px;
+    margin-top: 10px; 
+}
+
+.btn-carrinho {
+    background-color: #D89A9E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-carrinho:hover,
+.btn-carrinho:focus {
+    background-color: #8F676B;
+    outline: none;
+}
+
 /* Sobre */
 .sobre {
     max-width: 900px;
@@ -438,3 +461,4 @@ body {
     background-color: #8F676B;
     outline: none;
 }
+
