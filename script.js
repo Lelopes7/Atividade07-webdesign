@@ -115,9 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   botoesCarrinho.forEach(botao => {
     botao.addEventListener('click', () => {
-      const nomeProdutoEl = botao.parentElement.parentElement.querySelector('h4');
-      const nomeProduto = nomeProdutoEl ? nomeProdutoEl.textContent : 'Produto';
-      mostrarAlerta(`"${nomeProduto}" foi adicionado ao carrinho 🛍️`, 'success');
+    const produto = botao.closest(".produto");
+    const nome = produto.querySelector("h4").innerText;
+    const preco = produto.querySelector(".preco").innerText;
+    const imagem = produto.querySelector("img").src;
+    const item = { nome, preco, imagem };
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    carrinho.push(item);
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    alert(`${nome} foi adicionado ao carrinho! 🛒`);
     });
   });
 
@@ -218,3 +224,4 @@ document.addEventListener('DOMContentLoaded', () => {
   window.mostrarAlerta = mostrarAlerta;
 
 });
+
