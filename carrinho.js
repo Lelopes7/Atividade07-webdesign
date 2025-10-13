@@ -27,7 +27,7 @@ if (carrinho.length === 0) {
       <div>
         <h4>${item.nome}</h4>
         <p>${item.preco}</p>
-        <button onclick="removerItem(${index})">Remover</button>
+        <button onclick="removerItem(${index})" id="remover-item">Remover</button>
       </div>
     `;
     lista.appendChild(div);
