@@ -56,10 +56,19 @@ function validateEmail(email) {
 
 // Função para comprar produto (exemplo)
 const botoesComprar = document.querySelectorAll('.btn-comprar');
+const botoesCarrinho = document.querySelectorAll('.btn-carrinho');
 
 botoesComprar.forEach(botao => {
   botao.addEventListener('click', () => {
-    alert('Produto adicionado ao carrinho!');
+    const nomeProduto = botao.parentElement.parentElement.querySelector('h4').textContent;
+    alert(`Você comprou: ${nomeProduto}! 💖`);
+  });
+});
+
+botoesCarrinho.forEach(botao => {
+  botao.addEventListener('click', () => {
+    const nomeProduto = botao.parentElement.parentElement.querySelector('h4').textContent;
+    alert(`"${nomeProduto}" foi adicionado ao carrinho 🛍️`);
   });
 });
 
@@ -147,11 +156,4 @@ inputPesquisa.addEventListener('keyup', (e) => {
   }
 });
 
-
-const btncarrinho = document.querySelectorAll('.btn-carrinho');
-botao.addEventListener('click', () => {
-const produtoDiv = botao.closest('.produto');
-const nomeProduto = produtoDiv.querySelector('h4').textContent;
-alert(`"${nomeProduto}" foi adicionado ao seu carrinho!`);
-});
 
