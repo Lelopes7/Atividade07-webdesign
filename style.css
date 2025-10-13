@@ -462,3 +462,48 @@ body {
     outline: none;
 }
 
+/* Alerta */
+.alerta {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 320px;
+  background-color: #D89A9E; 
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(143,103,107,0.3);
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Quando mostrar */
+.alerta.mostrar {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes de tipo */
+.alerta.success { background-color: #D89A9E; } 
+.alerta.error   { background-color: #8F676B; } 
+.alerta.info    { background-color: #E3BBB9; } 
+
+/* Responsividade */
+@media (max-width: 420px) {
+  .alerta {
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    max-width: calc(100% - 24px);
+    font-size: 13px;
+  }
+}
