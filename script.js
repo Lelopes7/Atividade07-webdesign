@@ -101,17 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Função para comprar produto (exemplo)
-  const botoesComprar = document.querySelectorAll('.btn-comprar');
   const botoesCarrinho = document.querySelectorAll('.btn-carrinho');
 
-  botoesComprar.forEach(botao => {
-    botao.addEventListener('click', () => {
-      const nomeProdutoEl = botao.parentElement.parentElement.querySelector('h4');
-      const nomeProduto = nomeProdutoEl ? nomeProdutoEl.textContent : 'Produto';
-      // usar alerta na tela em vez de alert()
-      mostrarAlerta(`Você comprou: ${nomeProduto}! 💖`, 'success');
-    });
-  });
 
   botoesCarrinho.forEach(botao => {
     botao.addEventListener('click', () => {
