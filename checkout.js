@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-checkout');
   const mensagem = document.getElementById('mensagem');
 
+  // Função para carregar produtos do carrinho na tela
   function carregarCarrinho() {
     try {
       return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Função para transformar a precificação para o padrão brasileiro 
   function parsePreco(precoStr) {
     if (!precoStr) return 0;
     const apenas = precoStr.replace(/[^\d,.-]/g, '').replace('.', '');
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return isNaN(n) ? 0 : n;
   }
 
+  // Função para exibir resumo da compra 
   function exibirResumo() {
     const carrinho = carregarCarrinho();
     resumoItens.innerHTML = '';
@@ -32,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let total = 0;
+
+    // Para cada item adivionar a quantidade e o preço
     carrinho.forEach(item => {
       const qtd = item.quantidade || 1;
       const precoNum = (item.precoNumero !== undefined) ? item.precoNumero : parsePreco(item.preco);

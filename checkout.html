@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<!--Informações do arquivo-->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,34 +9,44 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header class="header">
+    <!-- Logo com imagem e texto -->
     <a href="index.html" class="logo-link">
       <img src="img/logo.png" alt="Logo Dress Pink" class="logo-img" />
       <span class="logo-text">Dress Pink</span>
     </a>
   </header>
 
+  <!--Título-->
   <main style="max-width:800px;margin:32px auto;padding:16px;">
     <h2 id="finalizar">Finalizar Compra</h2>
 
+    <!--Resumo do pedido-->
     <section id="resumo">
       <h3 class="dados">Resumo</h3>
       <div id="resumo-itens"></div>
       <p id="subtotal"></p>
     </section>
 
+    <!--Formulário de compra-->
     <section id="formulario">
       <h3 class="dados">Dados de entrega</h3>
       <form id="form-checkout">
+
+        <!--Nome para compra-->
         <label for="nome">Nome</label><br>
         <input id="nome" name="nome" required /><br><br>
 
+        <!--Email para compra-->
         <label for="email">Email</label><br>
         <input id="email" type="email" name="email" required /><br><br>
 
+        <!--Endereço para compra-->
         <label for="endereco">Endereço</label><br>
         <input id="endereco" name="endereco" required /><br><br>
 
+        <!--Botão para confirmar compra-->
         <button type="submit" id="btn-confirmar">Confirmar Pedido</button>
         <a href="carrinho.html"><button type="button" id="voltar-carrinho">Voltar ao Carrinho</button></a>
       </form>
@@ -43,10 +55,12 @@
     </section>
   </main>
 
+  <!--Rodapé-->
   <footer class="footer">
     <p>© 2025 Dress Pink. Todos os direitos reservados.</p>
   </footer>
 
+  <!--Insere o Javascript-->
   <script src="checkout.js" defer></script>
 </body>
 </html>

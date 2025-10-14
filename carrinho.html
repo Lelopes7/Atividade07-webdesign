@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<!--Informações do arquivo-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrinho de Compras - Dress Pink</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+  <!--Cabeçalho -->
   <header class="header">
+    <!-- Logo com imagem e texto -->
     <a href="index.html" class="logo-link">
       <img src="img/logo.png" alt="Logo Dress Pink" class="logo-img" />
       <span class="logo-text">Dress Pink</span>
     </a>
   </header>
 
+  <!--Carrinho de compras-->
   <main class="carrinho-container">
     <h2>🛍️ Seu Carrinho</h2>
     <div id="lista-carrinho"></div>
 
     <p id="total" class="total"></p>
 
+    <!--Linka os botões à página principal e à página de finalizar compra-->
     <button id="limpar-carrinho">Esvaziar Carrinho</button>
     <a href="index.html"><button id="voltar-a-loja">Voltar à Loja</button></a>
     <a href="checkout.html"><button id="finalizar-compra">Finalizar Compra</button></a>
   </main>
 
+  <!--Rodapé-->
   <footer class="footer">
     <p>© 2025 Dress Pink. Todos os direitos reservados.</p>
   </footer>
 
+  <!--Insere o Javascript-->
   <script src="carrinho.js" defer></script>
 </body>
 </html>

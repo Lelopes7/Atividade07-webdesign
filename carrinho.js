@@ -5,9 +5,11 @@ const btnLimpar = document.getElementById("limpar-carrinho");
 
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
+//Exibe o carrinho de compras
 function exibirCarrinho() {
   lista.innerHTML = "";
 
+//Verifica se o carrinho tem algum item, caso não, mostra a mensagem
 if (carrinho.length === 0) {
     lista.innerHTML = "<p>Seu carrinho está vazio 🛍️</p>";
     totalEl.textContent = "";
@@ -16,6 +18,7 @@ if (carrinho.length === 0) {
 
   let total = 0;
 
+  //Mostra os produtos com valor em reais
   carrinho.forEach((item, index) => {
     const precoNumero = parseFloat(item.preco.replace("R$", "").replace(",", "."));
     total += precoNumero;
@@ -33,15 +36,18 @@ if (carrinho.length === 0) {
     lista.appendChild(div);
   });
 
+  //Mostra valor total do carrinho
   totalEl.textContent = `Total: R$ ${total.toFixed(2).replace(".", ",")}`;
 }
 
+//Função para limpar o carrinho
 function removerItem(index) {
   carrinho.splice(index, 1);
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
   exibirCarrinho();
 }
 
+//Pede confirmação para a ação
 btnLimpar.addEventListener("click", () => {
   if (confirm("Tem certeza que deseja esvaziar o carrinho?")) {
     localStorage.removeItem("carrinho");
